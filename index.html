@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>kameDroid</title>
 
+<!-- タブのアイコン -->
+<link rel="icon" type="image/png" href="logo.png">
+
 <style>
+
 body{
     margin:0;
     background:#f2f2f2;
@@ -14,19 +20,25 @@ body{
 
 header{
     background:white;
-    padding:20px;
-    border-bottom:2px solid #bdbdbd;
     text-align:center;
+    padding:20px;
+    border-bottom:2px solid #bfbfbf;
+}
+
+.logo{
+    width:64px;
+    height:64px;
+    vertical-align:middle;
 }
 
 h1{
-    margin:0;
-    font-size:48px;
-    color:#2b2b2b;
+    display:inline;
+    font-size:64px;
+    margin-left:10px;
 }
 
 .subtitle{
-    font-size:24px;
+    font-size:22px;
     margin-top:10px;
 }
 
@@ -35,13 +47,13 @@ h1{
 }
 
 .section{
-    background:#9ACD32;
+    background:#99CC00;
+    text-align:center;
     font-size:28px;
     font-weight:bold;
-    text-align:center;
-    padding:10px;
-    border-top:2px solid #6f8f00;
-    border-bottom:2px solid #6f8f00;
+    padding:12px;
+    border-top:2px solid #6f9300;
+    border-bottom:2px solid #6f9300;
 }
 
 table{
@@ -56,11 +68,21 @@ td{
     font-size:22px;
 }
 
+a{
+    color:#0066cc;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
 .footer{
     text-align:center;
-    padding:20px;
     color:#666;
+    padding:25px;
 }
+
 </style>
 
 </head>
@@ -69,14 +91,16 @@ td{
 
 <header>
 
-<h1>🤖 kameDroid</h1>
+<img src="logo.png" class="logo">
+
+<h1>kameDroid</h1>
 
 <div class="subtitle">
 Android Apps & Projects
 </div>
 
 <div class="gif">
-<img src="android.gif" width="180" alt="Android">
+<img src="android.gif" width="180">
 </div>
 
 </header>
@@ -126,4 +150,5 @@ CzeDroid GitHub Repository
 </div>
 
 </body>
+
 </html>
