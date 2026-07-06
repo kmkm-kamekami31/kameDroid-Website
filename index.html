@@ -1,108 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- タイトル -->
-    <title>kameDroid</title>
+<title>kameDroid</title>
 
-    <!-- ファビコン -->
-    <link rel="icon" type="image/png" href="icon.png">
-    <link rel="shortcut icon" href="icon.png">
-    <link rel="apple-touch-icon" href="icon.png">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="icon.png?v=1">
+<link rel="shortcut icon" href="icon.png?v=1">
+<link rel="apple-touch-icon" href="icon.png">
 
-    <style>
-        body{
-            margin:0;
-            font-family:Arial, Helvetica, sans-serif;
-            background:#f4f4f4;
-        }
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#99CC00">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 
-        .header{
-            background:white;
-            text-align:center;
-            padding:20px;
-        }
+<style>
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f2f2f2;
+}
 
-        .header img.logo{
-            width:64px;
-            vertical-align:middle;
-        }
+.header{
+    text-align:center;
+    background:white;
+    padding:20px;
+}
 
-        .header h1{
-            display:inline;
-            margin-left:10px;
-            font-size:56px;
-        }
+.logo{
+    width:64px;
+    vertical-align:middle;
+}
 
-        .header p{
-            font-size:18px;
-        }
+h1{
+    display:inline;
+    margin-left:10px;
+    font-size:60px;
+}
 
-        .androidgif{
-            width:180px;
-            margin-top:10px;
-        }
+.subtitle{
+    font-size:20px;
+    margin-top:5px;
+}
 
-        .title{
-            background:#9acd00;
-            border-top:2px solid #6e8f00;
-            border-bottom:2px solid #6e8f00;
-            text-align:center;
-            padding:10px;
-            font-size:24px;
-            font-weight:bold;
-        }
+.android{
+    width:180px;
+    margin-top:15px;
+}
 
-        .item{
-            background:white;
-            border-bottom:1px solid #999;
-            padding:20px;
-            font-size:18px;
-        }
+.section{
+    background:#99CC00;
+    border-top:2px solid #6F9900;
+    border-bottom:2px solid #6F9900;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    padding:10px;
+}
 
-        footer{
-            text-align:center;
-            padding:20px;
-            color:#666;
-        }
-    </style>
+.item{
+    background:white;
+    border-bottom:1px solid #999;
+    padding:20px;
+}
+
+.item b{
+    font-size:22px;
+}
+
+footer{
+    text-align:center;
+    color:#666;
+    padding:20px;
+}
+</style>
+
 </head>
-
 <body>
 
 <div class="header">
-    <img src="icon.png" class="logo" alt="Logo">
-    <h1>kameDroid</h1>
-    <p>Android Apps &amp; Projects</p>
 
-    <img src="android.gif" class="androidgif" alt="Android">
+<img src="icon.png" class="logo">
+<h1>kameDroid</h1>
+
+<div class="subtitle">
+Android Apps & Projects
 </div>
 
-<div class="title">Projects</div>
+<img src="android.gif" class="android">
 
-<div class="item">
-    <b>CzeDroid</b><br>
-    Fake Android Error Dialog Creator
+</div>
+
+<div class="section">
+Projects
 </div>
 
 <div class="item">
-    <b>DroidBox</b><br>
-    Coming Soon
+<b>CzeDroid</b><br>
+Fake Android Error Dialog Creator
 </div>
 
-<div class="title">Downloads</div>
+<div class="item">
+<b>DroidBox</b><br>
+Coming Soon
+</div>
+
+<div class="section">
+Downloads
+</div>
 
 <div class="item">
-    <a href="https://github.com/kmkm-kamekami31/CzeDroid">
-        CzeDroid GitHub Repository
-    </a>
+<a href="https://github.com/kmkm-kamekami31/CzeDroid">
+CzeDroid GitHub Repository
+</a>
 </div>
 
 <footer>
-    © 2026 kameDroid
+© 2026 kameDroid
 </footer>
+
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js");
+    });
+}
+</script>
 
 </body>
 </html>
